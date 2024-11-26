@@ -1,0 +1,101 @@
+.modalDiv {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s, top 0.4s;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+.sideMainDiv #sidebar {
+  transition: 0.3s;
+}
+.sideMainDiv #sidebar aside .asideMenuDiv nav ul {
+  line-height: 2.5;
+}
+
+.mainDiv .emptyText {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.mainDiv .emptyText i {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+.mainDiv .searchTable .searchInput {
+  width: 1000px;
+}
+.mainDiv .searchTable .searchInput input {
+  border: 1px solid gray;
+}
+.mainDiv .searchTable table {
+  width: 1000px;
+  border-collapse: collapse;
+}
+.mainDiv .searchTable table th {
+  padding: 8px;
+  text-align: left;
+  font-size: 700;
+  height: 40px;
+}
+.mainDiv .searchTable table td {
+  border-bottom: 1px solid #070F2B;
+  padding: 8px;
+}
+
+.darkMode .asideSec aside {
+  color: #fff;
+  background-color: #535C91;
+}
+.darkMode .mainSec {
+  background-color: #070F2B;
+}
+.darkMode .mainSec header div {
+  color: #DDE6ED;
+}
+.darkMode .mainSec .mainDiv main .secText {
+  color: #DDE6ED;
+}
+.darkMode .mainSec .mainDiv main .mainGridDiv div {
+  background-color: #535C91;
+  color: #DDE6ED;
+}
+.darkMode .mainSec .mainDiv main .searchTable .searchInput input {
+  background: transparent;
+  color: white;
+}
+.darkMode .mainSec .mainDiv main .searchTable .searchInput button {
+  background: transparent;
+  border: 1px solid gray;
+  color: white;
+}
+.darkMode .mainSec .mainDiv main .searchTable table th {
+  background-color: white;
+  color: #070F2B;
+}
+.darkMode .mainSec .mainDiv main .searchTable table td {
+  border-bottom: 1px solid white;
+  color: white;
+}
+.darkMode .mainSec .mainDiv main .searchTable table td button {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

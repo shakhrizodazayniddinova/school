@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>School</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body onkeyup="keyUp(event)" id="body" onload="loaded()">
+
+    <div id="myModal">
+        <div class="modalDiv w-72 h-32 flex flex-col bg-black rounded-md text-center px-2 py-1 text-white bg-cyan-950 block" id="modal">
+            <button id="closeModal" class="closeModal float-right bg-transparent text-3xl">&times;</button>
+            <div class="flex justify-center items-center mt-10 ml-2">
+                <h2 class="text-lg">Are you sure to delete?</h2>
+            </div>
+            <button id="deleteAll" class="closeModal w-10 float-right text-md px-2 mt-5 mr-1">yes</button>
+        </div>
+    </div>
+    
+    <div class="sideMainDiv flex" id="sideMainDiv">
+        <!-- ASIDE -->
+        <section class="asideSec hide" id="sidebar">
+            <aside class="w-80 h-screen px-6 py-5 text-white bg-cyan-950">
+    
+                <!-- aside menu -->
+                <div class="asideMenuDiv px-2">
+                    <h1 class="menuText text-3xl font-semibold">Menu</h1>
+                    <nav class="asideMenu mt-11">
+                        <ul class="list-none text-2xl font-semibold gap-20">
+                            <li><a href="./index.html"> Home </a></li>
+                            <li><a href="./teachers.html"> Teachers </a></li>
+                            <li><a href="./employees.html"> Employees </a></li>
+                            <li><a href="./science.html"> Sciences </a></li>
+                            <li><a href="./rooms.html"> Rooms </a></li>
+                            <li><a href="./lessons.html"> Lesson schedules </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+        </section>
+    
+        <!-- MAIN -->
+        <section class="mainSec w-full h-screen flex flex-col" id="rightSide">
+            <!-- main header -->
+            <header class="w-full h-12">
+                <div class="flex justify-between pt-2 px-6 text-cyan-950 text-2xl">
+                    <button class="btn" id="toggleSidebarBtn" title="if you want, press the 'Esc' key to open the menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <button class="btn" id="moonBtn">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <button class="btn" id="sunBtn" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 56 56"><path fill="currentColor" d="M30.04 4.61c0-1.102-.938-2.04-2.04-2.04s-2.039.938-2.039 2.04v4.92c0 1.102.938 2.04 2.04 2.04c1.1 0 2.038-.938 2.038-2.04Zm9.538 8.929c-.773.797-.773 2.11 0 2.883c.797.797 2.086.82 2.906 0l3.493-3.492a2.065 2.065 0 0 0 0-2.907c-.774-.773-2.086-.773-2.883 0Zm-26.062 2.883c.773.797 2.086.797 2.882 0c.774-.75.774-2.11.024-2.883l-3.492-3.516c-.75-.75-2.086-.773-2.883 0c-.774.774-.774 2.11-.024 2.883ZM28 16.047c-6.539 0-11.953 5.414-11.953 11.953S21.46 39.977 28 39.977c6.516 0 11.93-5.438 11.93-11.977c0-6.54-5.414-11.953-11.93-11.953m23.32 13.992c1.102 0 2.04-.937 2.04-2.039s-.938-2.04-2.04-2.04h-4.898c-1.102 0-2.04.938-2.04 2.04s.938 2.039 2.04 2.039ZM4.68 25.961c-1.102 0-2.04.937-2.04 2.039s.938 2.039 2.04 2.039h4.898c1.102 0 2.04-.937 2.04-2.039s-.938-2.04-2.04-2.04ZM42.46 39.6a2.08 2.08 0 0 0-2.883 0c-.773.774-.773 2.087 0 2.883L43.094 46c.797.773 2.11.75 2.883-.023c.797-.774.797-2.086 0-2.883Zm-32.437 3.47c-.797.773-.797 2.109-.024 2.882c.774.774 2.11.797 2.906.024l3.492-3.493c.774-.773.774-2.086.024-2.882c-.774-.774-2.11-.774-2.906 0Zm20.015 3.398c0-1.102-.937-2.04-2.039-2.04s-2.039.938-2.039 2.04v4.922c0 1.101.938 2.039 2.04 2.039c1.1 0 2.038-.938 2.038-2.04Z"/></svg>
+                    </button>
+                </div>
+            </header>
+    
+            <!-- main content -->
+            <div class="mainDiv w-11/12 flex flex-col pl-24">   
+                <main class="mt-20">
+                    <div class="flex justify-between items-center">
+                        <h1 class="secText text-4xl text-cyan-950 font-bold">Students</h1>
+                    </div>
+
+                    <div class="searchTable mt-16">
+                        <div class="searchInput flex justify-between">
+                            <!-- search -->
+                            <input class="text-cyan-950 p-1 rounded-md" placeholder="Search" id="searchTableInput">
+                            <button class="py-0 px-3 text-red-700 border border-red-700 rounded-md" id="deleteAllBtn" onclick="openModal()">delete all</button>
+                        </div>
+
+                        <!-- table -->
+                        <table class="table table-fixed mt-5 text-cyan-950" id="studentsTable">
+                            <thead>
+                                <tr class="bg-cyan-950 text-white">
+                                    <th>No</th>
+                                    <th>Name</th>
+                                    <th>Surname</th>
+                                    <th colspan="2">Phone Number</th>
+                                    <th>Class</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr>
+                                    <td>1</td>
+                                    <td>Peter</td>
+                                    <td>Griffin</td>
+                                    <td colspan="2">+7 92048203890</td>
+                                    <td>11-A</td>
+                                    <td><button class="btn text-red-700 font-semibold" id="deleteBtn"  onclick="deleteTr(this)"><i class="fa-solid fa-trash"></i></button></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+            </div>
+        </section>
+    </div>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="../js/modal.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/student.js"></script>
+<script src="../js/darkmode.js"></script>
+</body>
+</html>

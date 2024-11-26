@@ -1,0 +1,59 @@
+// dark mode
+.darkMode{
+    .asideSec{
+        aside{
+            color: #fff;
+            background-color: #535C91;
+        }
+    }
+    .mainSec{
+        background-color: #070F2B;
+        header{
+            div{
+                color: #DDE6ED;
+            }
+        }
+
+        .mainDiv{
+            main{
+                .secText{
+                    color: #DDE6ED;
+                }
+
+                .mainGridDiv{
+                    div{
+                        background-color: #535C91;
+                        color: #DDE6ED;
+                    }
+                }
+                .searchTable{
+                    .searchInput{
+                        input{
+                            background: transparent;
+                            color: white;
+                        }
+                        button{
+                            background: transparent;
+                            border: 1px solid gray;
+                            color: white;
+                        }
+                    }
+                    table{
+                        th{
+                            background-color: white;
+                            color: #070F2B;
+                        }
+                        td{
+                            border-bottom: 1px solid white;
+                            color: white;
+                            button{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
