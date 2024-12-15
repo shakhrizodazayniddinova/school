@@ -1,10 +1,10 @@
 const sections = [
-    {title: "Teachers", link: "./teachers.html"},
-    {title: "Students", link: "./student.html"},
-    {title: "Employees", link: "./employees.html"},
-    {title: "Sciences", link: "./science.html"},
-    {title: "Rooms", link: "./rooms.html"},
-    {title: "Lesson schedules", link: "./lessons.html"},
+    {title: "Teachers", link: "./pages/teachers.html"},
+    {title: "Students", link: "./pages/student.html"},
+    {title: "Employees", link: "./pages/employees.html"},
+    {title: "Sciences", link: "./pages/science.html"},
+    {title: "Rooms", link: "./pages/rooms.html"},
+    {title: "Lesson schedules", link: "./pages/lessons.html"},
 ];
 
 const setCards = () => {
